@@ -126,14 +126,14 @@ var varVariable = "I am a var variable";
 
 // LET HOISTING
 console.log(letVariable);
-// error → let is in TDZ before declaration
+// ReferenceError → let is in TDZ before declaration
 
 let letVariable = "I am a let variable";
 
 
 // CONST HOISTING
 console.log(constVariable);
-// error → const is also in TDZ
+// ReferenceError → const is also in TDZ
 
 const constVariable = "I am a const variable";
 
@@ -148,7 +148,7 @@ function sayHello() {
 
 // FUNCTION EXPRESSION (NOT HOISTED)
 sayHi();
-// error → function expression is not ready yet
+// ReferenceError → function expression is not ready yet
 
 const sayHi = function () {
     console.log("Hello from function expression");
