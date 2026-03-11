@@ -102,7 +102,7 @@ function myFunction() {
     }
 
     console.log(blockLet);
-    // error → blockLet only exists inside the if block
+    // ReferenceError → blockLet only exists inside the if block
 }
 
 myFunction();
@@ -110,7 +110,7 @@ myFunction();
 console.log(globalVar); // works
 
 console.log(functionVar);
-// error → functionVar only exists inside myFunction
+// ReferenceError → functionVar only exists inside myFunction
 
 
 // ===================================================================
