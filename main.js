@@ -1,56 +1,38 @@
 import { increment, reset } from "./counter.js";
 
+// --- Counter ---
 const countDisplay = document.getElementById("count-display");
-const incrementButton = document.getElementById("btn-increment");
-const resetButton = document.getElementById("btn-reset");
 
+document.getElementById("btn-increment").addEventListener("click", () => {
+    countDisplay.textContent = increment();
+});
+
+document.getElementById("btn-reset").addEventListener("click", () => {
+    countDisplay.textContent = reset();
+});
+
+// --- Form Validation ---
 const form = document.getElementById("my-form");
 const nameInput = document.getElementById("name-input");
 const inputError = document.getElementById("input-error");
 const welcomeMessage = document.getElementById("welcome-message");
 
-function setCount(value) {
-    countDisplay.textContent = value;
-}
-
-function showError(message) {
-    inputError.textContent = message;
-    inputError.style.display = "block";
-}
-
-function clearError() {
-    inputError.textContent = "";
-    inputError.style.display = "none";
-}
-
-function showWelcome(name) {
-    welcomeMessage.textContent = `Welcome, ${name}!`;
-}
-
-function clearWelcome() {
-    welcomeMessage.textContent = "";
-}
-
-incrementButton.addEventListener("click", () => {
-    setCount(increment());
-});
-
-resetButton.addEventListener("click", () => {
-    setCount(reset());
-});
-
 form.addEventListener("submit", (event) => {
     event.preventDefault();
 
-    const name = nameInput.value.trim();
+    const value = nameInput.value.trim();
 
-    if (name.length < 3) {
-        showError("Input must be at least 3 characters.");
-        clearWelcome();
-        return;
+    if (value.length >= 3) {
+        // Valid input
+        inputError.style.display = "none";
+        inputError.textContent = "";
+        welcomeMessage.textContent = `Welcome, ${value}!`;
+        nameInput.value = "";
+    } 
+    else {
+        // Invalid input
+        inputError.textContent = "Input must be at least 3 characters.";
+        inputError.style.display = "block";
+        welcomeMessage.textContent = "";
     }
-
-    clearError();
-    showWelcome(name);
-    nameInput.value = "";
 });
