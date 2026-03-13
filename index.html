@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter and Form Validation</title>
+</head>
+
+<body>
+    <h1>Counter and Form Validation</h1>
+    <h2>Counter</h2>
+    <p>Current count: <span id="count-display">0</span></p>
+    <button id="btn-increment">Increment</button>
+    <button id="btn-reset">Reset</button>
+
+    <hr />
+
+    <h2>Form</h2>
+    <form id="my-form">
+        <label for="name-input">Name:</label>
+        <input type="text" id="name-input" placeholder="Enter at least 3 characters" />
+        <p id="input-error" style="color: red; display: none;"></p>
+        <br /><br>
+        <button type="submit">Submit</button>
+    </form>
+    <p id="welcome-message"></p>
+
+    <script type="module" src="main.js"></script>
+</body>
+
+</html>
