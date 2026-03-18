@@ -74,10 +74,6 @@ function val(id) {
     return document.getElementById(id).value.trim();
 }
 
-// Validate an email address format
-function isValidEmail(email) {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-}
 
 // Validate a phone number 
 function isValidPhone(phone) {
