@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Details</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="card">
+        <h1>Customer Details:</h1>
+
+        <!-- Full Name -->
+        <div class="section">
+            <div class="field-label">Full Name <span class="required-star">*</span></div>
+            <div class="row">
+                <div class="field-wrap">
+                    <input type="text" id="firstName" placeholder="First Name">
+                    <div class="field-sublabel">First Name</div>
+                    <div class="error-msg" id="firstNameErr"><span class="err-icon">ⓘ</span><span class="err-text">First name is required.</span></div>
+                </div>
+                <div class="field-wrap">
+                    <input type="text" id="lastName" placeholder="Last Name">
+                    <div class="field-sublabel">Last Name</div>
+                    <div class="error-msg" id="lastNameErr"><span class="err-icon">ⓘ</span><span class="err-text">Last Name is required.</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Address -->
+        <div class="section">
+            <div class="field-label">Address <span class="required-star">*</span></div>
+            <div class="field-wrap">
+                <input type="text" id="street1" placeholder="">
+                <div class="field-sublabel">Street Address</div>
+                <div class="error-msg" id="street1Err"><span class="err-icon">ⓘ</span><span class="err-text">Street address is required.</span></div>
+            </div>
+            <div class="field-wrap">
+                <input type="text" id="street2" placeholder="">
+                <div class="field-sublabel">Street Address Line 2</div>
+            </div>
+            <div class="row">
+                <div class="field-wrap">
+                    <input type="text" id="city" placeholder="">
+                    <div class="field-sublabel">City</div>
+                    <div class="error-msg" id="cityErr"><span class="err-icon">ⓘ</span><span class="err-text">City is
+                            required.</span></div>
+                </div>
+                <div class="field-wrap">
+                    <input type="text" id="state" placeholder="">
+                    <div class="field-sublabel">State / Province</div>
+                    <div class="error-msg" id="stateErr"><span class="err-icon">ⓘ</span><span class="err-text">State is required.</span></div>
+                </div>
+            </div>
+            <div class="field-wrap">
+                <input type="text" id="postal" placeholder="">
+                <div class="field-sublabel">Postal / Zip Code</div>
+                <div class="error-msg" id="postalErr"><span class="err-icon">ⓘ</span><span class="err-text">Postal code is required.</span></div>
+            </div>
+        </div>
+
+        <!-- Phone -->
+        <div class="section">
+            <div class="field-label">Phone Number <span class="required-star">*</span></div>
+            <div class="field-wrap">
+                <input type="tel" id="phone" placeholder="(000) 000-0000">
+                <div class="error-msg" id="phoneErr"><span class="err-icon">ⓘ</span><span class="err-text">Phone numbers required.</span></div>
+            </div>
+        </div>
+
+        <!-- Email -->
+        <div class="section">
+            <div class="field-label">E-mail</div>
+            <div class="field-wrap">
+                <input type="email" id="email" placeholder="ex: email@yahoo.com">
+                <div class="error-msg" id="emailErr"><span class="err-icon">ⓘ</span><span class="err-text">Enter a valid email address.</span></div>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- How did you hear -->
+        <div class="section">
+            <div class="field-label">How did you hear about us? <span class="required-star">*</span></div>
+            <div class="field-wrap">
+                <select id="hearAbout">
+                    <option value="">Please Select</option>
+                    <option value="None">None</option>
+                    <option value="Newspaper">Newspaper</option>
+                    <option value="Internet">Internet</option>
+                    <option value="Magazine">Magazine</option>
+                    <option value="Other">Other (Please specify...)</option>
+                </select>
+                <div class="error-msg" id="hearAboutErr"><span class="err-icon">ⓘ</span><span class="err-text">Please select how you heard about us.</span></div>
+            </div>
+            <div id="other-section">
+                <div class="field-label">Other <span class="required-star">*</span></div>
+                <div class="field-wrap">
+                    <input type="text" id="otherText" placeholder="Please describe...">
+                    <div class="error-msg" id="otherTextErr"><span class="err-icon">ⓘ</span><span class="err-text">This field is required.</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Feedback -->
+        <div class="section">
+            <div class="field-label">Feedback about us:</div>
+            <div class="field-wrap">
+                <textarea id="feedback" placeholder="Share your feedback..."></textarea>
+            </div>
+        </div>
+
+        <!-- Suggestions -->
+        <div class="section">
+            <div class="field-label">Suggestions if any for further improvement:</div>
+            <div class="field-wrap">
+                <textarea id="suggestions" placeholder="Your suggestions..."></textarea>
+            </div>
+        </div>
+
+        <!-- Recommend -->
+        <div class="section">
+            <div class="field-label">Will you be willing to recommend us?</div>
+            <div class="checkbox-group">
+                <label class="checkbox-item">
+                    <input type="checkbox" class="recommend-cb" value="Yes">
+                    <span>Yes</span>
+                </label>
+                <label class="checkbox-item">
+                    <input type="checkbox" class="recommend-cb" value="Maybe">
+                    <span>Maybe</span>
+                </label>
+                <label class="checkbox-item">
+                    <input type="checkbox" class="recommend-cb" value="No">
+                    <span>No</span>
+                </label>
+            </div>
+        </div>
+
+        <!-- References -->
+        <div class="section">
+            <div class="field-label">Please give reference of any two people whom you feel:</div>
+            <table class="ref-table">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Full Name</th>
+                        <th>Address</th>
+                        <th>Contact Number</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td><input type="text" id="ref1name" placeholder=""></td>
+                        <td><input type="text" id="ref1addr" placeholder=""></td>
+                        <td><input type="text" id="ref1contact" placeholder=""></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td><input type="text" id="ref2name" placeholder=""></td>
+                        <td><input type="text" id="ref2addr" placeholder=""></td>
+                        <td><input type="text" id="ref2contact" placeholder=""></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <button class="submit-btn" id="submitBtn">Submit</button>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal-overlay" id="successModal">
+        <div class="modal">
+            <div class="modal-icon">
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                    <path d="M5 14l7 7L23 7" stroke="rgb(24,189,91)" stroke-width="2.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </div>
+            <h2>Thank You!</h2>
+            <p>Your submission has been received</p>
+            <button class="modal-close" id="modalClose">Done</button>
+        </div>
+    </div>
+
+    <script src="details.js"></script>
+</body>
+
+</html>
